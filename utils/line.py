@@ -34,7 +34,7 @@ def notify_line(args):
             "contents": [
                 {
                     "type": "text",
-                    "text": "こんな物件見つけたぽも！",
+                    "text": "こんな物件を見つけました！",
                     "size": "xs",
                     "color": "#ffffff",
                     "weight": "regular",
@@ -157,7 +157,7 @@ def notify_line(args):
             "contents": [
                 {
                     "type": "button",
-                    "action": {"type": "uri", "label": "詳しくはこっちだぽも！", "uri": args["link"]},
+                    "action": {"type": "uri", "label": "詳しくはこっちへ！", "uri": args["link"]},
                     "style": "link",
                     "margin": "none",
                     "gravity": "center",
@@ -172,7 +172,7 @@ def notify_line(args):
         },
         "styles": {"footer": {"backgroundColor": "#666E85"}},
     }
-    flexMessage = {"type": "flex", "altText": "新しい不動産情報が出たぽも", "contents": flexContents}
+    flexMessage = {"type": "flex", "altText": "新しい不動産情報が出ました", "contents": flexContents}
     headers = {"Authorization": "Bearer " + token, "Content-Type": "application/json"}
     data = {"messages": [flexMessage]}
     # Send the request to LINE Message API
