@@ -9,6 +9,6 @@ def get_database_config():
     return {
         "url": os.getenv("COSMOS_DB_ACCOUNT_URL"),
         "key": os.getenv("COSMOS_DB_ACCOUNT_KEY"),
-        "database_name": "TOMO",
+        "database_name": "PROPERTIES",
         "container_name": "SUUMO",
     }
