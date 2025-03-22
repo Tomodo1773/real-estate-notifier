@@ -1,11 +1,13 @@
-import requests
-import os
 import json
+import os
+
+import requests
+
 
 def notify_line(args):
 
     # .env fileから変数を取得
-    token = os.environ.get("line_token")
+    token = os.environ.get("LINE_CHANNEL_SECRET")
 
     # LINE Message API
     lineMessageApi = "https://api.line.me/v2/bot/message/broadcast"

@@ -28,13 +28,13 @@
 4. LINE Developers アカウントの作成とチャンネルの設定
    - [LINE Developers](https://developers.line.biz/) にアクセスし、新しいアカウントを作成してください。
    - 新しいチャンネルを作成し、Messaging API を有効化してください。
-   - チャンネルアクセストークン（長期）を取得し、環境変数 `line_token` に設定してください。
+   - チャンネルアクセストークン（長期）を取得し、環境変数 `LINE_CHANNEL_SECRET` に設定してください。
    - LINE Bot の設定方法については、[公式ドキュメント](https://developers.line.biz/ja/docs/messaging-api/building-bot/) を参照してください。
 
 5. 環境変数の設定
    - `COSMOS_DB_ACCOUNT_URL`：Cosmos DB アカウントの URI
    - `COSMOS_DB_ACCOUNT_KEY`：Cosmos DB アカウントのプライマリキー
-   - `line_token`：LINE Bot のチャンネルアクセストークン（長期）
+   - `LINE_CHANNEL_SECRET`：LINE Bot のチャンネルアクセストークン（長期）
 
 以上の前提条件が満たされていることを確認した上で、プロジェクトを実行してください。
 
@@ -74,7 +74,7 @@ azure-functions/
 ## 実行方法
 
 1. Azure Functions をデプロイします。
-2. 必要な環境変数 (`COSMOS_DB_ACCOUNT_URL`、`COSMOS_DB_ACCOUNT_KEY`、`line_token`) を設定します。
+2. 必要な環境変数 (`COSMOS_DB_ACCOUNT_URL`、`COSMOS_DB_ACCOUNT_KEY`、`LINE_CHANNEL_SECRET`) を設定します。
 3. 毎日20時に `suumo` 関数がトリガーされ、新着物件情報の取得と登録、LINE Bot への通知が行われます。
 
 このプロジェクトでは、Azure Functions と CosmosDB、LINE Bot を組み合わせることで、不動産情報の自動収集と通知を実現しています。
